@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'io.growth.challenge'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+dependencies {
+    implementation 'top.jfunc.json:Json-Gson:1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+}
+
+test {
+    useJUnitPlatform()
+}
